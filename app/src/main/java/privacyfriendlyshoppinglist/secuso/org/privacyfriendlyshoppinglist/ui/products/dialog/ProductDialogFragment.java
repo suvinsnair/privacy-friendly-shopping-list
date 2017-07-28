@@ -183,7 +183,7 @@ public class ProductDialogFragment extends DialogFragment
 
                 if ( !StringUtils.isEmpty(String.valueOf(dialogCache.getQuantity().getText())) )
                 {
-                    int value = Integer.parseInt(String.valueOf(dialogCache.getQuantity().getText()));
+                    float value = Float.parseFloat(String.valueOf(dialogCache.getQuantity().getText()));
                     value++;
                     String newQuantity = String.valueOf(value);
                     dialogCache.getQuantity().setText(newQuantity);
@@ -202,7 +202,7 @@ public class ProductDialogFragment extends DialogFragment
             {
                 if ( !StringUtils.isEmpty(String.valueOf(dialogCache.getQuantity().getText())) )
                 {
-                    int value = Integer.parseInt(String.valueOf(dialogCache.getQuantity().getText()));
+                    Float value = Float.parseFloat(String.valueOf(dialogCache.getQuantity().getText()));
 
                     if ( value > 0 )
                     {

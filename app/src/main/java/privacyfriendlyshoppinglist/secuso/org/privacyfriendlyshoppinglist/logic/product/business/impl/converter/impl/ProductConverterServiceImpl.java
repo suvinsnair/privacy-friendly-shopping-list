@@ -48,11 +48,11 @@ public class ProductConverterServiceImpl implements ProductConverterService
 
         if ( !StringUtils.isEmpty(item.getQuantity()) )
         {
-            entity.setQuantity(Integer.valueOf(item.getQuantity()));
+            entity.setQuantity(Float.valueOf(item.getQuantity()));
         }
         else
         {
-            entity.setQuantity(DEFAULT_QUANTITY);
+            entity.setQuantity((float) DEFAULT_QUANTITY);
         }
 
         entity.setNotes(item.getProductNotes());

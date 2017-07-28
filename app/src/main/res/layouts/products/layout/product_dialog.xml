@@ -94,18 +94,18 @@
                     <android.support.design.widget.TextInputLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
+
                         <android.support.design.widget.TextInputEditText
-                                android:id="@+id/quantity"
-                                android:inputType="number"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:selectAllOnFocus="true"
-                                android:maxLines="1"
-                                android:gravity="center"
-                                android:maxLength="3"
-                                android:imeOptions="actionNext"
-                                android:hint="@string/quantity_text">
-                        </android.support.design.widget.TextInputEditText>
+                            android:id="@+id/quantity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/quantity_text"
+                            android:imeOptions="actionNext"
+                            android:inputType="number|numberDecimal"
+                            android:maxLength="4"
+                            android:maxLines="1"
+                            android:selectAllOnFocus="true"></android.support.design.widget.TextInputEditText>
                     </android.support.design.widget.TextInputLayout>
                 </LinearLayout>
 
@@ -138,39 +138,38 @@
             </LinearLayout>
 
             <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="@dimen/negative_margin_big"
-                    android:paddingBottom="@dimen/dialog_padding_vertical"
-                    android:paddingRight="@dimen/dialog_padding_horizontal"
-                    android:paddingLeft="@dimen/dialog_padding_horizontal">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/negative_margin_big"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dialog_padding_vertical"
+                android:paddingLeft="@dimen/dialog_padding_horizontal"
+                android:paddingRight="@dimen/dialog_padding_horizontal">
 
                 <android.support.design.widget.TextInputLayout
-                        android:layout_toStartOf="@+id/expand_button"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/expand_button">
+
                     <android.support.design.widget.TextInputEditText
-                            android:id="@+id/product_notes"
-                            android:inputType="textMultiLine|textCapSentences"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/list_notes"/>
+                        android:id="@+id/product_notes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/list_notes"
+                        android:inputType="textMultiLine|textCapSentences" />
                 </android.support.design.widget.TextInputLayout>
 
-                <ImageButton
-                        android:id="@+id/expand_button"
-                        android:tint="@color/colorAccent"
-                        android:layout_width="50sp"
-                        android:layout_height="@dimen/icon_size"
-                        android:paddingLeft="15sp"
-                        android:paddingRight="15sp"
-                        android:scaleType="fitCenter"
-                        android:layout_marginLeft="@dimen/list_margin_big"
-                        android:background="?android:selectableItemBackground"
-                        android:src="@drawable/ic_keyboard_arrow_down_white_48sp"
-                        android:layout_centerVertical="true"
-                        android:layout_alignParentEnd="true"/>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/expand_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:clickable="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_keyboard_arrow_down_white_48sp"
+                    app:layout_anchorGravity="bottom|right|end" />
+
             </RelativeLayout>
 
             <LinearLayout

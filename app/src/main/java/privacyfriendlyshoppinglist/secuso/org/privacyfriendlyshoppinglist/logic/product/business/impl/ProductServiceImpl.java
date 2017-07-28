@@ -382,7 +382,7 @@ public class ProductServiceImpl implements ProductService
         int nrProducts = 0;
         for ( ProductItem item : productItems )
         {
-            Integer quantity = Integer.valueOf(item.getQuantity());
+            Float quantity = Float.valueOf(item.getQuantity());
             nrProducts += quantity;
             String price = item.getProductPrice();
             if ( price != null )

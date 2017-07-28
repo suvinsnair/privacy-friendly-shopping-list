@@ -16,7 +16,7 @@ public class ProductItemEntity extends AbstractEntity
     private String productName;
 
     @DatabaseField
-    private Integer quantity;
+    private Float quantity;
 
     @DatabaseField
     private String notes;
@@ -46,12 +46,12 @@ public class ProductItemEntity extends AbstractEntity
     {
     }
 
-    public Integer getQuantity()
+    public Float getQuantity()
     {
         return quantity;
     }
 
-    public void setQuantity(Integer quantity)
+    public void setQuantity(Float quantity)
     {
         this.quantity = quantity;
     }
